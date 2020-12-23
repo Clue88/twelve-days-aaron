@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>The Twelve Days of Christmas!</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
+        <script>
+            let d = new Date();
+            let day_of_christmas = 0;
+            if (d.getFullYear() == 2020) {
+                if (d.getMonth() == 11) {
+                    if (d.getDate() >= 25) {
+                        day_of_christmas = d.getDate() - 24
+                    }
+                }
+            } else if (d.getFullYear() == 2021) {
+                if (d.getMonth() == 0) {
+                    if (d.getDate() <= 5) {
+                        day_of_christmas = d.getDate() + 7;
+                    } else {
+                        day_of_christmas = 12;
+                    }
+                } else {
+                    day_of_christmas = 12;
+                }
+            } else if (d.getFullYear() > 2021) {
+                day_of_christmas = 12;
+            }
+
+            function hideAll() {
+                let children = document.getElementsByClassName("is-child");
+                for (i = 12; i >= day_of_christmas + 1; i--) {
+                    children[i].style.display = "none";
+                }
+            }
+
+        </script>
+    </head>
+    <body style="margin:15px" onload="hideAll()">
+        <div class="tile is-ancestor">
+            <div class="tile is-parent">
+                <article class="tile is-child box">
+                    <p class="title">Hello, Aaron!</p>
+                    <p class="subtitle">
+                        Merry Christmas! Below you will find twelve gifts
+                        lovingly handcrafted (aka stolen from the internet)
+                        that will unlock each day. Enjoy!
+                    </p>
+                    <p id="dayCounter">
+                        If you're seeing this, that means you've arrived before
+                        Christmas! The gifts will come soon... patience is a
+                        virtue.
+                    </p>
+                </article>
+            </div>
+        </div>
+
+        <div class="tile is-ancestor">
+            <div class="tile is-parent is-3">
+                <article class="tile is-child box">
+                    <p class="title">One</p>
+                </article>
+            </div>
+            <div class="tile is-parent is-3">
+                <article class="tile is-child box">
+                    <p class="title">Two</p>
+                </article>
+            </div>
+            <div class="tile is-parent is-3">
+                <article class="tile is-child box">
+                    <p class="title">Three</p>
+                </article>
+            </div>
+            <div class="tile is-parent is-3">
+                <article class="tile is-child box">
+                    <p class="title">Four</p>
+                </article>
+            </div>
+        </div>
+
+        <div class="tile is-ancestor">
+            <div class="tile is-parent is-3">
+                <article class="tile is-child box">
+                    <p class="title">Five</p>
+                </article>
+            </div>
+            <div class="tile is-parent is-3">
+                <article class="tile is-child box">
+                    <p class="title">Six</p>
+                </article>
+            </div>
+            <div class="tile is-parent is-3">
+                <article class="tile is-child box">
+                    <p class="title">Seven</p>
+                </article>
+            </div>
+            <div class="tile is-parent is-3">
+                <article class="tile is-child box">
+                    <p class="title">Eight</p>
+                </article>
+            </div>
+        </div>
+
+        <div class="tile is-ancestor">
+            <div class="tile is-parent">
+                <article class="tile is-child box">
+                    <p class="title">Nine</p>
+                </article>
+            </div>
+            <div class="tile is-parent">
+                <article class="tile is-child box">
+                    <p class="title">Ten</p>
+                </article>
+            </div>
+            <div class="tile is-parent">
+                <article class="tile is-child box">
+                    <p class="title">Eleven</p>
+                </article>
+            </div>
+            <div class="tile is-parent">
+                <article class="tile is-child box">
+                    <p class="title">Twelve</p>
+                </article>
+            </div>
+        </div>
+    </body>
+</html>
