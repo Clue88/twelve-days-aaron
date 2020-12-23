@@ -4,6 +4,8 @@
         <title>The Twelve Days of Christmas!</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel='icon' href='assets/favicon.ico' type='image/x-icon'/>
+        <link rel='apple-touch-icon' href='assets/favicon.ico' />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
 
         <script>
@@ -29,10 +31,17 @@
                 day_of_christmas = 12;
             }
 
+            day_of_christmas = 12;
+
             function hideAll() {
                 let children = document.getElementsByClassName("is-child");
                 for (i = 12; i >= day_of_christmas + 1; i--) {
                     children[i].style.display = "none";
+                }
+
+                if (day_of_christmas > 0) {
+                    document.getElementById("dayCounter").innerHTML =
+                        `Today is Day ${day_of_christmas}!`
                 }
             }
 
@@ -61,21 +70,38 @@
             <div class="tile is-parent is-3">
                 <article class="tile is-child box">
                     <p class="title">One</p>
+                    <p class="subtitle">partridge in a pear tree</p>
+                    <p>... and a photo of a huge 小笼包!</p><br>
+                    <figure class="image">
+                        <img src="assets/01xiaolongbao.jpg">
+                    </figure>
                 </article>
             </div>
             <div class="tile is-parent is-3">
                 <article class="tile is-child box">
                     <p class="title">Two</p>
+                    <p class="subtitle">turtle doves</p>
+                    <p>...and a pun. Sorry.</p><br>
+                    <p>
+                        What did the grape say when it got crushed? Nothing, it
+                        just let out a little wine.
+                    </p>
                 </article>
             </div>
             <div class="tile is-parent is-3">
                 <article class="tile is-child box">
                     <p class="title">Three</p>
+                    <p class="subtitle">french hens</p>
+                    <p>...and us! Don't we look so cute?</p><br>
+                    <figure class="image">
+                        <img src="assets/03us.jpg">
+                    </figure>
                 </article>
             </div>
             <div class="tile is-parent is-3">
                 <article class="tile is-child box">
                     <p class="title">Four</p>
+                    <p class="subtitle">calling birds</p>
                 </article>
             </div>
         </div>
@@ -84,21 +110,25 @@
             <div class="tile is-parent is-3">
                 <article class="tile is-child box">
                     <p class="title">Five</p>
+                    <p class="subtitle">golden rings</p>
                 </article>
             </div>
             <div class="tile is-parent is-3">
                 <article class="tile is-child box">
                     <p class="title">Six</p>
+                    <p class="subtitle">geese-a-laying</p>
                 </article>
             </div>
             <div class="tile is-parent is-3">
                 <article class="tile is-child box">
                     <p class="title">Seven</p>
+                    <p class="subtitle">swans-a-swimming</p>
                 </article>
             </div>
             <div class="tile is-parent is-3">
                 <article class="tile is-child box">
                     <p class="title">Eight</p>
+                    <p class="subtitle">maids-a-milking</p>
                 </article>
             </div>
         </div>
@@ -107,21 +137,25 @@
             <div class="tile is-parent">
                 <article class="tile is-child box">
                     <p class="title">Nine</p>
+                    <p class="subtitle">ladies dancing</p>
                 </article>
             </div>
             <div class="tile is-parent">
                 <article class="tile is-child box">
                     <p class="title">Ten</p>
+                    <p class="subtitle">lords-a-leaping</p>
                 </article>
             </div>
             <div class="tile is-parent">
                 <article class="tile is-child box">
                     <p class="title">Eleven</p>
+                    <p class="subtitle">pipers piping</p>
                 </article>
             </div>
             <div class="tile is-parent">
                 <article class="tile is-child box">
                     <p class="title">Twelve</p>
+                    <p class="subtitle">drummers drumming</p>
                 </article>
             </div>
         </div>
